@@ -4,9 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI-Powered Student Growth & Opportunity Tracker</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div id="authModal" class="modal">
+  <div class="modal-content">
+    <h2>Welcome</h2>
+    <div id="loginSection">
+      <h3>Login</h3>
+      <input type="text" id="loginName" placeholder="Enter your name">
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+    </div>
+
+    <div id="signupSection" style="display:none;">
+      <h3>Sign Up</h3>
+      <input type="text" id="signupName" placeholder="Full Name">
+      <input type="text" id="signupYear" placeholder="Year (e.g. 2nd Year)">
+      <input type="text" id="signupContact" placeholder="Contact No">
+      <input type="text" id="signupCollege" placeholder="College/University"> <br>
+      <button onclick="signup()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+  </div>
+</div>
+
   <!-- Navigation -->
   <nav>
     <div class="logo">Student Growth Tracker</div>
@@ -47,25 +69,60 @@
   </section>
 
   <!-- Features -->
-  <section id="features">
-    <h2>Key Features</h2>
-    <div class="features-grid">
-      <div class="feature-card">📚 Personalized Learning</div>
-      <div class="feature-card">📊 Progress Tracking</div>
-      <div class="feature-card">💼 Opportunities Hub</div>
-      <div class="feature-card">🤝 Community & Mentorship</div>
+ <section id="features">
+  <h2>Key Features</h2>
+  <div class="features-grid">
+    <div class="feature-card" role="button" aria-expanded="false">
+      <div class="card-header">Personalized Learning 📚🎓</div>
+      <div class="feature-details">Custom paths tailored to your specific goals and pace.</div>
     </div>
-  </section>
+    
+    <div class="feature-card" role="button" aria-expanded="false">
+      <div class="card-header">📊 Progress Tracking</div>
+      <div class="feature-details">Visual insights into your growth with weekly reports.</div>
+    </div>
 
+    <div class="feature-card" role="button" aria-expanded="false">
+      <div class="card-header">💼 Opportunities Hub</div>
+      <div class="feature-details">
+        <ol type="i">
+             <li>  Mega Hackathon 2026
+                   📅 Feb 28 – Mar 1, 2026
+                   🌐 Free online global hackathon with prizes.
+                  🔗 Register:<a href="https://mega-hackathon-2026-students.devpost.com/" target="_blank">mega hackathon</a>
+ </li> 
+ <li>
+   EU Code Week Hackathons Finals
+📅 Mar 11, 2026
+💻 Online finale event showcasing solutions from coding teams across Europe.
+🔗 Register: <a href="https://codeweek.eu/blog/eu-code-week-hackathons-finals-2026-registrations-open/" target="_blank">Eu Code</a>
+ </li>
+ <li>
+ WCE Hackathon 2026
+📍 WCE, Sangli (India)
+📅 Online idea submission: 2–25 Feb 2026
+📅 Offline build: 20–21 Mar 2026
+🎁 Prize up to ₹1 L
+🔗 Register: <a href="https://www.wcehackathon.in/" target="_blank">WCE Hackathon</a>
+ </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="feature-card" role="button" aria-expanded="false">
+      <div class="card-header">🤝 Community & Mentorship</div>
+      <div class="feature-details">Connect with industry experts and peer-led study groups.
+        <ol type="I">
+          <li> Arya student Club <a href="https://sites.google.com/aryacollege.in/student-clubs-aceit/home" target="_blank">club</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- Dashboard Mockup -->
   <section id="dashboard">
     <h2>Student Dashboard (Demo)</h2>
-    <div class="progress">
-      <h3>Learning Progress</h3>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill">70%</div>
-      </div>
-    </div>
+    
 
     <div class="opportunities">
       <h3>Upcoming Opportunities</h3>
@@ -92,7 +149,7 @@
 
   <!-- Footer -->
   <footer>
-    <p> Student Growth Tracker </p>
+    <p>Student Growth Tracker</p>
   </footer>
 
   <script src="script.js"></script>
